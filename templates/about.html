@@ -1,0 +1,212 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+</head>
+
+    <style>
+        body {
+            background-color: lightblue;
+        }
+        
+        .form-box {
+            max-width: 500px;
+            margin: auto;
+            margin-top: 50px;
+            padding: 50px;
+            background: #ffffff;
+            /* border: 10px solid #f2f2f2; */
+            border-radius: 2%;
+        }
+        
+        .form-box h1 {
+            text-align: center;
+            font-size: 50px;
+        }
+        
+        .form-box .btn {
+            background-color: lightblue;
+            border: 10px;
+            border-radius: 2%;
+        }
+        
+        
+        input, textarea {
+            width: 100%;
+        }
+        h1 {
+            /* text-align: center; */
+            font-size: 1.3rem;
+            padding-left: 5%;
+            padding-right: 5%;
+            margin-top: 10%;
+        }
+        
+        /* img {
+            margin-left: 38%;
+            margin-top: 10%;
+            width: auto;
+            height: auto;
+            border-radius: 40%;
+            align-self: center;
+        } */
+        
+        .circular--landscape { 
+            display: inline-block; 
+            position: relative; 
+            width: 300px; 
+            height: 300px; 
+            overflow: hidden; 
+            border-radius: 50%; 
+            margin-left: 550px;
+            margin-top: 50px;
+        } 
+        .circular--landscape img { 
+            width: auto; 
+            height: 140%; 
+            /* margin-left: 5px;  */
+        } 
+        
+        * {
+            box-sizing: border-box;
+          }
+          
+          body {
+            margin: 0px;
+            font-family: 'segoe ui';
+            background-color: lightblue;
+          }
+          
+          .nav {
+            height: 50px;
+            width: 100%;
+            background-color: #fc8955;
+            position: relative;
+          }
+          
+          .nav > .nav-header {
+            display: inline;
+          }
+          
+          .nav > .nav-header > .nav-title {
+            display: inline-block;
+            font-size: 22px;
+            color: #fff;
+            padding: 10px 10px 10px 10px;
+          }
+          
+          .nav > .nav-btn {
+            display: none;
+          }
+          
+          .nav > .nav-links {
+            display: inline;
+            float: right;
+            font-size: 18px;
+          }
+          
+          .nav > .nav-links > a {
+            display: inline-block;
+            padding: 13px 10px 13px 10px;
+            text-decoration: none;
+            color: #efefef;
+          }
+          
+          .nav > .nav-links > a:hover {
+            background-color: rgba(0, 0, 0, 0.3);
+          }
+          
+          .nav > #nav-check {
+            display: none;
+          }
+          
+          @media (max-width:600px) {
+            .nav > .nav-btn {
+              display: inline-block;
+              position: absolute;
+              right: 0px;
+              top: 0px;
+            }
+            .nav > .nav-btn > label {
+              display: inline-block;
+              width: 50px;
+              height: 50px;
+              padding: 13px;
+            }
+            .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+              background-color: rgba(0, 0, 0, 0.3);
+            }
+            .nav > .nav-btn > label > span {
+              display: block;
+              width: 25px;
+              height: 10px;
+              border-top: 2px solid #eee;
+            }
+            .nav > .nav-links {
+              position: absolute;
+              display: block;
+              width: 100%;
+              background-color: #333;
+              height: 0px;
+              transition: all 0.3s ease-in;
+              overflow-y: hidden;
+              top: 50px;
+              left: 0px;
+            }
+            .nav > .nav-links > a {
+              display: block;
+              width: 100%;
+            }
+            .nav > #nav-check:not(:checked) ~ .nav-links {
+              height: 0px;
+            }
+            .nav > #nav-check:checked ~ .nav-links {
+              height: calc(100vh - 50px);
+              overflow-y: auto;
+            }
+          }
+        
+    </style>
+    <body>
+        <div class="nav">
+            <input type="checkbox" id="nav-check">
+            <div class="nav-header">
+              <div class="nav-title">
+                {% comment %} <a href="{% url 'index' %}" target="_blank" rel="noopener noreferrer">Shrinivas</a> {% endcomment %}
+                Shrinivas
+              </div>
+            </div>
+            
+            
+            <div class="nav-links">
+              <a href="{% url 'about' %}" target="_blank">About</a>
+              <a href="{% url 'skills' %}" target="_blank">Skills</a>
+              <a href="{% url 'projects' %}" target="_blank">Projects</a>
+              <a href="{% url 'contact' %}" target="_blank">Contact</a>
+            </div>
+          </div>
+    
+        </div>
+        <div class="circular--landscape"> <img src="https://lh3.googleusercontent.com/u/3/drive-viewer/AFGJ81p5-CRSgqmEKOs_7s3R9K1VzCUzbCk--eDobOfqBAgkKHWQwbWJr-aDpDMTkM71AyGqZO2sVMzsvYRx7hKDAgKizYXw=w1440-h787" /> </div>
+        <h1>My name is Shrinivas, and I am currently pursuing my second year of B.Tech in Computer Engineering at GH Raisoni College of Engineering, Pune. With a cumulative grade point average 9.4 of 10, I am dedicated to excelling in my studies and becoming a proficient computer engineer.<br>
+            <br>
+            Ever since I embarked on this journey, my passion for technology has grown exponentially. I am constantly fascinated by the rapidly evolving world of computer engineering and the endless possibilities it offers. My enthusiasm for the field motivates me to explore its various facets and acquire a comprehensive understanding of its core principles.<br>
+            <br>
+            Programming is one aspect that truly ignites my curiosity and fuels my drive to learn. I have a solid foundation in languages such as C++, Java, and Python, which enable me to develop efficient and innovative solutions to complex problems. The thrill of coding, debugging, and witnessing the tangible outcomes of my programs is truly exhilarating.<br>
+            <br>
+            As I progress in my academic journey, I am eager to delve deeper into specialized areas within computer engineering. I aspire to gain expertise in software engineering, computer networks, and artificial intelligence. By acquiring practical skills and staying updated with the latest industry trends, I aim to contribute to cutting-edge technological advancements that positively impact society.<br>
+            <br>
+            Beyond the confines of the classroom, I actively engage in coding competitions, hackathons, and coding clubs. These platforms provide me with valuable opportunities to apply my knowledge, collaborate with like-minded individuals, and sharpen my problem-solving abilities. Participating in these extracurricular activities not only enhances my technical skills but also allows me to develop effective communication and teamwork skills.<br>
+            <br>
+            In the future, my goal is to leverage my education and skills to make a meaningful impact in the field of computer engineering. I envision myself working on innovative projects that revolutionize the way we interact with technology, improve efficiency, and simplify everyday tasks. Additionally, I aspire to contribute to the open-source community, sharing my knowledge and collaborating with others to create a positive and inclusive tech ecosystem.<br>
+            <br>
+            In conclusion, as a second-year B.Tech student in Computer Engineering, I am an enthusiastic learner with a passion for technology and a drive to excel. With a solid foundation in programming languages, an eagerness to explore specialized domains, and a clear vision for my future, I am committed to becoming a successful computer engineer who contributes to the advancement of the field.<br>
+        </h1>
+        
+        <script src="" async defer></script>
+    </body>
+</html>

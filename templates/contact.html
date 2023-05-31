@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+</head>
+<style>
+    body {
+        background-color: lightblue;
+    }
+
+    label{
+        font-size: 20px;
+    }
+    .btn{
+        margin-top:10px;
+        height: 50px;
+        font-size: 20px;
+        font-weight: bold;
+    }
+    input{
+        height:30px;
+    }
+    
+    .form-box {
+        max-width: 500px;
+        margin: auto;
+        margin-top: 50px;
+        padding: 50px;
+        background: #ffffff;
+        /* border: 10px solid #f2f2f2; */
+        border-radius: 2%;
+    }
+    
+    .form-box h1 {
+        text-align: center;
+        font-size: 50px;
+    }
+    
+    .form-box .btn {
+        background-color: lightblue;
+        border: 10px;
+        border-radius: 2%;
+    }
+    
+    
+    input, textarea {
+        width: 100%;
+    }
+    h1 {
+        /* text-align: center; */
+        font-size: 1.3rem;
+        padding-left: 5%;
+        padding-right: 5%;
+        margin-top: 10%;
+    }
+    
+    /* img {
+        margin-left: 38%;
+        margin-top: 10%;
+        width: auto;
+        height: auto;
+        border-radius: 40%;
+        align-self: center;
+    } */
+    
+    .circular--landscape { 
+        display: inline-block; 
+        position: relative; 
+        width: 300px; 
+        height: 300px; 
+        overflow: hidden; 
+        border-radius: 50%; 
+        margin-left: 550px;
+        margin-top: 50px;
+    } 
+    .circular--landscape img { 
+        width: auto; 
+        height: 140%; 
+        /* margin-left: 5px;  */
+    } 
+    
+    * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0px;
+        font-family: 'segoe ui';
+        background-color: lightblue;
+      }
+      
+      .nav {
+        height: 50px;
+        width: 100%;
+        background-color: #fc8955;
+        position: relative;
+      }
+      
+      .nav > .nav-header {
+        display: inline;
+      }
+      
+      .nav > .nav-header > .nav-title {
+        display: inline-block;
+        font-size: 22px;
+        color: #fff;
+        padding: 10px 10px 10px 10px;
+      }
+      
+      .nav > .nav-btn {
+        display: none;
+      }
+      
+      .nav > .nav-links {
+        display: inline;
+        float: right;
+        font-size: 18px;
+      }
+      
+      .nav > .nav-links > a {
+        display: inline-block;
+        padding: 13px 10px 13px 10px;
+        text-decoration: none;
+        color: #efefef;
+      }
+      
+      .nav > .nav-links > a:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      
+      .nav > #nav-check {
+        display: none;
+      }
+      
+      @media (max-width:600px) {
+        .nav > .nav-btn {
+          display: inline-block;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+        }
+        .nav > .nav-btn > label {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          padding: 13px;
+        }
+        .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+        .nav > .nav-btn > label > span {
+          display: block;
+          width: 25px;
+          height: 10px;
+          border-top: 2px solid #eee;
+        }
+        .nav > .nav-links {
+          position: absolute;
+          display: block;
+          width: 100%;
+          background-color: #333;
+          height: 0px;
+          transition: all 0.3s ease-in;
+          overflow-y: hidden;
+          top: 50px;
+          left: 0px;
+        }
+        .nav > .nav-links > a {
+          display: block;
+          width: 100%;
+        }
+        .nav > #nav-check:not(:checked) ~ .nav-links {
+          height: 0px;
+        }
+        .nav > #nav-check:checked ~ .nav-links {
+          height: calc(100vh - 50px);
+          overflow-y: auto;
+        }
+      }
+    
+</style>
+<body>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            {% comment %} <a href="{% url 'index' %}" target="_blank" rel="noopener noreferrer">Shrinivas</a> {% endcomment %}
+            Shrinivas
+          </div>
+        </div>
+        
+        
+        <div class="nav-links">
+          <a href="{% url 'about' %}" target="_blank">About</a>
+          <a href="{% url 'skills' %}" target="_blank">Skills</a>
+          <a href="{% url 'projects' %}" target="_blank">Projects</a>
+          <a href="{% url 'contact' %}" target="_blank">Contact</a>
+        </div>
+      </div>
+
+    </div>
+        <div class="form-box">
+            <h1>Contact Form</h1>
+            <p><a href="https://getbootstrap.com"></a> <a href="https://www.formbucket.com"></a></p>
+            <form action="https://api.formbucket.com/f/c2K3QTQ" method="post">
+                <div class="form-group">
+                    <label for="name">Name</label>
+                    <input class="form-control" id="name" type="text" name="Name">
+                </div>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input class="form-control" id="email" type="email" name="Email">
+                </div>
+                <div class="form-group">
+                    <label for="message">Message</label>
+                    <textarea class="form-control" id="message" name="Message"></textarea>
+                </div>
+                <div>
+                    <input class="btn" type="submit" value="Submit" />
+                </div>
+            </form>
+        </div>
+    <script src="" async defer></script>
+</body>
+</html>

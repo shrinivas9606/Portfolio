@@ -1,0 +1,199 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <title>Shrinivas</title>
+</head>
+
+<style>
+    * {
+        box-sizing: border-box;
+      }
+      
+      body {
+        margin: 0px;
+        font-family: 'segoe ui';
+        background-color: lightblue;
+      }
+      
+      .nav {
+        height: 50px;
+        width: 100%;
+        background-color: #fc8955;
+        position: relative;
+      }
+      
+      .big-name{
+        
+        font-size: 50px;
+      }
+
+      .about{
+        margin: 0 15rem 0 15rem;
+        font-size: 25px;
+      }
+      .socials {
+        text-align: center;
+        padding:2.5rem;
+      }
+      
+      .socials a {
+        display: inline-block;
+        margin: 10px;
+        color: #000;
+        text-decoration: none;
+      }
+      
+      .socials a:hover {
+        color: #555;
+      }
+
+      .footer{
+        padding-top: 8px;
+      }
+      
+
+      
+      .nav > .nav-header {
+        display: inline;
+      }
+      
+      .nav > .nav-header > .nav-title {
+        display: inline-block;
+        font-size: 22px;
+        color: #fff;
+        padding: 10px 10px 10px 10px;
+      }
+      
+      .nav > .nav-btn {
+        display: none;
+      }
+      
+      .nav > .nav-links {
+        display: inline;
+        float: right;
+        font-size: 18px;
+      }
+      
+      .nav > .nav-links > a {
+        display: inline-block;
+        padding: 13px 10px 13px 10px;
+        text-decoration: none;
+        color: #efefef;
+      }
+      
+      .nav > .nav-links > a:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+      }
+      
+      .nav > #nav-check {
+        display: none;
+      }
+      
+      @media (max-width:600px) {
+        .nav > .nav-btn {
+          display: inline-block;
+          position: absolute;
+          right: 0px;
+          top: 0px;
+        }
+        .nav > .nav-btn > label {
+          display: inline-block;
+          width: 50px;
+          height: 50px;
+          padding: 13px;
+        }
+        .nav > .nav-btn > label:hover,.nav  #nav-check:checked ~ .nav-btn > label {
+          background-color: rgba(0, 0, 0, 0.3);
+        }
+        .nav > .nav-btn > label > span {
+          display: block;
+          width: 25px;
+          height: 10px;
+          border-top: 2px solid #eee;
+        }
+        .nav > .nav-links {
+          position: absolute;
+          display: block;
+          width: 100%;
+          background-color: #333;
+          height: 0px;
+          transition: all 0.3s ease-in;
+          overflow-y: hidden;
+          top: 50px;
+          left: 0px;
+        }
+        .nav > .nav-links > a {
+          display: block;
+          width: 100%;
+        }
+        .nav > #nav-check:not(:checked) ~ .nav-links {
+          height: 0px;
+        }
+        .nav > #nav-check:checked ~ .nav-links {
+          height: calc(100vh - 50px);
+          overflow-y: auto;
+        }
+      }
+</style>
+
+<body>
+    <div class="nav">
+        <input type="checkbox" id="nav-check">
+        <div class="nav-header">
+          <div class="nav-title">
+            {% comment %} <a href="{% url 'index' %}" target="_blank" rel="noopener noreferrer">Shrinivas</a> {% endcomment %}
+            Shrinivas
+          </div>
+        </div>
+        
+        
+        <div class="nav-links">
+          <a href="{% url 'about' %}" target="_blank">About</a>
+          <a href="{% url 'skills' %}" target="_blank">Skills</a>
+          <a href="{% url 'projects' %}" target="_blank">Projects</a>
+          <a href="{% url 'contact' %}" target="_blank">Contact</a>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="big-name">
+        <center>
+            <h1>Hey👋, I'm Shrinivas </h1>
+            <h5>A self taught Web-Developer.</h5>
+        </center>
+    </div>
+
+
+    <div class="about">
+        A passionate 2nd year CS undergrad, excelling in web development with a 9.3 GPA. His talent shines as he creates stunning and functional web experiences, embracing emerging technologies. With empathy for users and a commitment to innovation, Shrinivas is destined to leave a remarkable mark in the world of web development.I'm open to work and for creativity with different communities.
+    </div>
+
+    <div class="socials">
+        <center>
+            <a href="https://drive.google.com/file/d/1G1M84KqiqG4BXnpolZ9AmxhWj8CVpYdF/view?usp=share_link" target="blank" ><i class="fa-solid fa-file fa-3x"></i></a>
+            <a href="https://github.com/shrinivas9606" target="blank"><i class="fa-brands fa-github fa-3x"></i></a>
+            <a href="https://www.linkedin.com/in/shrinivas-narhare-ab5a0b208/" target="blank"><i class="fa-brands fa-linkedin fa-3x"></i></a>
+            <a href="https://www.instagram.com/shri_._reddy/" target="blank"><i class="fa-brands fa-instagram fa-3x"></i></a>
+            <a href="https://www.hackerrank.com/narhareshriniva1" target="blank"><i class="fa-brands fa-hackerrank fa-3x"></i></a>
+
+        </center>
+    
+    </div>
+
+    <div class="footer">
+        <center>
+            Created by Gautam & Shrinivas
+        </center>
+    </div>
+</body>
+
+    <script src="https://kit.fontawesome.com/b53972c862.js" crossorigin="anonymous"></script>
+
+</html>
